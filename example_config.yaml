@@ -1,0 +1,40 @@
+# Auto Form Submitter — Example Config
+# Copy this to config.yaml and edit
+
+url: "https://example.com/waitlist"
+
+# Warmup page (optional — visit first to get cookies)
+warmup: "https://example.com"
+
+# Form fields
+fields:
+  - selector: "input[name='email']"
+    value: "{email}"
+  - selector: "input[name='name']"
+    value: "{name}"
+  - selector: "input[name='wallet']"
+    value: "{wallet_address}"
+  - selector: "select[name='country']"
+    value: "United States"
+    type: "select"
+  - selector: "textarea[name='bio']"
+    value: "AI developer and blockchain enthusiast"
+
+# Checkboxes to check
+checkboxes:
+  - "input[type='checkbox']"
+
+# Submit button selector
+submit: "button[type='submit']"
+
+# Seconds to wait after submit
+wait_for: 10
+
+# Keyword to check in body for success
+success_check: "thank"
+
+# Enable stealth mode
+stealth: true
+
+# Proxy (optional)
+# proxy: "socks5://127.0.0.1:1080"

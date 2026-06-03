@@ -1,0 +1,4 @@
+email,name,wallet_address
+alice@gmail.com,Alice,0x1234567890abcdef1234567890abcdef12345678
+bob@gmail.com,Bob,0xabcdef1234567890abcdef1234567890abcdef12
+charlie@gmail.com,Charlie,0x9876543210fedcba9876543210fedcba98765432

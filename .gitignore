@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual env
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Config (user-specific)
+config.yaml
+wallets.csv
+wallets.json
+
+# Logs
+*.log
+results/
+
+# OS
+.DS_Store
+Thumbs.db
