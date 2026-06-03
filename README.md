@@ -2,6 +2,19 @@
 
 Automate web form submissions for testnets, waitlists, and registrations using Playwright.
 
+## 🎯 Apa Ini?
+
+**Auto Form Submitter** adalah tool untuk mengisi dan mengirim form web secara otomatis. Sangat berguna untuk:
+
+- **Airdrop Hunter** — daftar testnet dalam jumlah besar (50-100 wallet sekaligus)
+- **Waitlist Join** — auto-join waitlist project crypto
+- **Batch Registration** — register banyak akun sekaligus
+- **Daily Check-in** — auto check-in harian di platform testnet
+- **Form Testing** — test form web untuk bug/validasi
+
+**Masalah yang diselesaikan:**
+Manual daftar testnet dengan 50 wallet = 2-3 jam. Dengan tool ini = 10 menit.
+
 ## Features
 
 - ✅ Auto-fill and submit web forms
