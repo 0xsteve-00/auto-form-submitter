@@ -1,99 +1,80 @@
 # 🚀 Auto Form Submitter
 
-Automate web form submissions for testnets, waitlists, and registrations using Playwright.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 
-## 🎯 Apa Ini?
+> Automatically fill and submit web forms at scale — perfect for testnet registrations, waitlists, and airdrop campaigns.
 
-**Auto Form Submitter** adalah tool untuk mengisi dan mengirim form web secara otomatis. Sangat berguna untuk:
+## 🎯 What Is This?
 
-- **Airdrop Hunter** — daftar testnet dalam jumlah besar (50-100 wallet sekaligus)
-- **Waitlist Join** — auto-join waitlist project crypto
-- **Batch Registration** — register banyak akun sekaligus
-- **Daily Check-in** — auto check-in harian di platform testnet
-- **Form Testing** — test form web untuk bug/validasi
+Auto Form Submitter is a tool that automates form submissions on websites. Instead of manually filling out forms one by one, this tool handles everything automatically:
 
-**Masalah yang diselesaikan:**
-Manual daftar testnet dengan 50 wallet = 2-3 jam. Dengan tool ini = 10 menit.
+- **Testnet Registration** — Bulk register 50+ wallets for testnet programs
+- **Waitlist & Whitelist** — Auto-submit to waitlists with wallet addresses and social handles
+- **Batch Operations** — Process hundreds of submissions in one run
 
-## Features
+## 🤔 Who Needs This?
 
-- ✅ Auto-fill and submit web forms
-- ✅ Multi-wallet batch support (EVM + Solana)
-- ✅ Stealth mode (anti-bot detection bypass)
-- ✅ Proxy support (HTTP/SOCKS5)
-- ✅ Custom field mapping via YAML config
-- ✅ Human-like typing delays
-- ✅ Akamai/Cloudflare challenge handling
-- ✅ Success/failure logging
-- ✅ CSV/JSON wallet import
+- **Airdrop farmers** who need to register multiple wallets
+- **Community managers** running batch registrations
+- **Testnet participants** joining early access programs
+- **Anyone** tired of filling out the same form repeatedly
 
-## Installation
+## ⚡ Features
+
+- 🌐 Multi-chain wallet support (EVM, Solana)
+- 📝 Smart form field detection
+- 🔄 Auto-retry on failure
+- 📊 Progress tracking with real-time logs
+- 🛡️ Proxy support for rate limit bypass
+- 💾 Resume from last checkpoint
+- 📦 Batch mode with configurable delays
+
+## 📦 Installation
 
 ```bash
 git clone https://github.com/0xsteve-00/auto-form-submitter.git
 cd auto-form-submitter
 pip install -r requirements.txt
-playwright install chromium
 ```
 
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
-# Single submission
-python submit.py --config config.yaml
+# Single form submission
+python submitter.py --form https://example.com/form --data config.json
 
-# Batch with wallets
-python submit.py --config config.yaml --wallets wallets.csv --batch 10
-
-# With proxy
-python submit.py --config config.yaml --proxy socks5://127.0.0.1:1080
+# Batch mode with wallet list
+python submitter.py --form https://example.com/form --wallets wallets.txt --batch
 ```
 
-## Config Example (config.yaml)
+## 📄 Config Format
 
-```yaml
-url: "https://example.com/waitlist"
-fields:
-  - selector: "input[name='email']"
-    value: "{email}"
-  - selector: "input[name='name']"
-    value: "{name}"
-  - selector: "select[name='country']"
-    value: "United States"
-    type: "select"
-checkboxes:
-  - "input[type='checkbox']"
-submit: "button[type='submit']"
-wait_for: 10  # seconds after submit
-success_check: "thank"  # keyword in body text
+```json
+{
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "john@example.com",
+  "wallet": "0x1234...abcd",
+  "twitter": "@johndoe"
+}
 ```
 
-## Wallets CSV
+## 📁 Project Structure
 
-```csv
-email,name,wallet_address
-alice@gmail.com,Alice,0x1234...
-bob@gmail.com,Bob,0x5678...
+```
+auto-form-submitter/
+├── submitter.py        # Main submission engine
+├── requirements.txt    # Python dependencies
+├── .gitignore          # Git ignore rules
+├── LICENSE             # MIT License
+└── README.md           # This file
 ```
 
-## Use Cases
+## ⚠️ Disclaimer
 
-- 🎯 Testnet registrations (airdrops, waitlists)
-- 📝 Batch form submissions
-- 🔄 Daily check-in automation
-- 🏗️ Multi-account setups
+This tool is for educational purposes and legitimate use only. Users are responsible for complying with all applicable terms of service and laws.
 
-## Tech Stack
+## 📜 License
 
-- Python 3.10+
-- Playwright (Chromium)
-- PyYAML
-- CSV/JSON support
-
-## Disclaimer
-
-For educational purposes only. Use responsibly and respect ToS of target platforms.
-
-## License
-
-MIT
+MIT License — free to use, modify, and distribute.
