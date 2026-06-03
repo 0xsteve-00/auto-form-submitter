@@ -17,7 +17,7 @@ Automate web form submissions for testnets, waitlists, and registrations using P
 ## Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/auto-form-submitter.git
+git clone https://github.com/0xsteve-00/auto-form-submitter.git
 cd auto-form-submitter
 pip install -r requirements.txt
 playwright install chromium
